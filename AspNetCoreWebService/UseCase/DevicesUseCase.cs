@@ -1,22 +1,22 @@
-﻿using AspNetCoreWebService.Entities;
+﻿using AspNetCoreWebService.DataAccessors;
+using AspNetCoreWebService.Entities;
 
 namespace AspNetCoreWebService.UseCase
 {
-    public interface IDevicesUseCase
+    public class DevicesUseCase
     {
-        bool RegisterDevice(Device device);
-    }
+        private readonly IDeviceDataAccessor _deviceDataAccessor;
 
-    public class DevicesUseCase : IDevicesUseCase
-    {
-        public DevicesUseCase()
+        public DevicesUseCase(IDeviceDataAccessor deviceDataAccessor)
         {
-
+            _deviceDataAccessor = deviceDataAccessor;
         }
 
         public bool RegisterDevice(Device device)
         {
-            return true;
+            var result = _deviceDataAccessor.UpsertDevice(device);
+
+            return result;
         }
     }
 }
