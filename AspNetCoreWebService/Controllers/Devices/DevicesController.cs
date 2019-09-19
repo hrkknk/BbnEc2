@@ -1,7 +1,7 @@
 ﻿using AspNetCoreWebService.Controllers.Devices;
 using AspNetCoreWebService.DataAccessors;
 using AspNetCoreWebService.Entities;
-using AspNetCoreWebService.UseCase;
+using AspNetCoreWebService.UseCases;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AspNetCoreWebService.Controllers

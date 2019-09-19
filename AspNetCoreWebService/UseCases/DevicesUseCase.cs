@@ -1,7 +1,7 @@
 ﻿using AspNetCoreWebService.DataAccessors;
 using AspNetCoreWebService.Entities;
 
-namespace AspNetCoreWebService.UseCase
+namespace AspNetCoreWebService.UseCases
 {
     public class DevicesUseCase
     {
