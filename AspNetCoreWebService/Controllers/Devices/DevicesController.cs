@@ -12,7 +12,7 @@ namespace AspNetCoreWebService.Controllers
         private readonly IDevicesUseCase _devicesUseCase = new DevicesUseCase();
 
         [HttpPost]
-        public JsonResult Post(Device device)
+        public JsonResult Post([FromBody] Device device)
         {
             var success = _devicesUseCase.RegisterDevice(device);
 
